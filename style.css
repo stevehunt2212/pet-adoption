@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --circle-size: 617px;
+}
+body {
+    font-family: "Source Sans 3", sans-serif;
+    /* font-optical-sizing: auto; */
+    font-weight: 400;
+    font-style: normal;
+}
+.top-content {
+    background-color: #001D37;
+    position: relative;
+    overflow: hidden;
+}
+.blue-circle {
+  height: var(--circle-size);
+  width: var(--circle-size);
+  position: absolute;
+  left: 67px;
+  top: -360px;
+  background-color: #6079FF;
+  border-radius: 50%;
+  filter: blur(150px);
+  z-index: 1
+}
+.purple-circle {
+  position: absolute;
+  width: var(--circle-size);
+  height: var(--circle-size);
+  left: 1028px;
+  top: 62px;
+  background: #D660FF;
+  filter: blur(150px);
+  border-radius: 50%;
+}
+.hero {
+    max-width: 1097px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 139px 16px;
+    height: 100%;
+    color: #fff;
+}
+.hero-content {
+    max-width: 525px;
+    position: relative;
+    z-index: 10;
+}
+.hero h1 {
+    color: #fff;
+    font-size: 100px;
+    line-height: 1;
+}
+.hero .sub {
+    font-size: 20px;
+    margin: 50px 0 40px 0;
+}
+.btn {
+    border-radius: 100px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    border: 2px solid transparent;
+    padding: 17px 40px;
+    transition: background-color 0.4s;
+}
+.btn-view {
+    background-color: #475AFF;
+    border-color: #475AFF;
+}
+.btn-view:hover {
+    background-color: #3645c9;
+    border-color: #3645c9;
+}
+.btn-manage {
+    border-color: #fff;
+}
+.btn-manage:hover {
+    background-color: #fff;
+    color: #3645c9;
+}
+.hero-btns {
+    display: flex;
+    gap: 11px;
+}
+.hero-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 67px;
+    position: relative;
+    z-index: 10;
+}
+.card {
+    padding: 33px 25px;
+    border: 1px solid rgba(255,255,255,0.25);
+    height: 322px;
+}
+h3 {
+    margin: 48px 0 14px 0;
+    font-size: 24px;
+}
+.card p {
+    font-size: 17px;
+}
+/* MAIN SECTION */
+main {
+    max-width: 1097px;
+    padding: 139px 16px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+h2 {
+    font-size: 85px;
+    line-height: 1;
+}
+h4 {
+    font-size: 24px;
+    font-weight: 600;
+}
+.description {
+    color: #626262;
+    line-height: 150%;
+    margin: 5px 0 15px 0;
+}
+.age {
+    font-size: 14px;
+    color: #A2A2A2;
+}
+.name {
+    display: flex;
+    align-items: center;
+    gap: 21px;
+}
+.pet-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+.pet-card {
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 165px 1fr;
+    overflow: hidden;
+    border: 1px solid #f3f3f3;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.08);
+}
+.pet-card-img {
+    width: 165px;
+}
+.pet-card-img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+.pet-card-content {
+    padding: 24px;
+}
+.filters {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 50px;
+}
+.filters span, button {
+    font-size: 22px;
+    color: #9F9F9F;
+    text-decoration: none;
+}
+button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    font-family: inherit;
+}
+.filters button.active {
+    text-decoration: underline;
+    color: #475AFF;
+}
+footer {
+    text-align: center;
+    padding-bottom: 50px;
+}
+footer p {
+    font-size: 14px;
+    color: #A6A6A6;
+}
+@media only screen and (max-width: 960px) {
+    .pet-cards {
+        grid-template-columns: 1fr;
+    }
+    .hero-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    main {
+        padding: 80px 16px;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .hero-cards {
+        grid-template-columns: 1fr;
+    }
+    .hero h1 {
+        font-size: 70px;
+    }
+    h2 {
+        font-size: 60px;
+    }
+    .filters {
+        gap: 10px;
+    }
+}
