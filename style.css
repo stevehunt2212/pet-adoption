@@ -7,6 +7,9 @@
 :root {
     --circle-size: 617px;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: "Source Sans 3", sans-serif;
     /* font-optical-sizing: auto; */
