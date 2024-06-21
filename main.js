@@ -15,7 +15,7 @@ async function getPets() {
 
   petData.forEach(pet => {
     const clone = template.content.cloneNode(true)
-    // clone.querySelector('.pet-cars').dataset.species = pet.species
+    clone.querySelector('.pet-card').dataset.species = pet.species
     clone.querySelector('h4').textContent = pet.name
     clone.querySelector('.description').textContent = pet.description
     clone.querySelector('.age').textContent = petAge(pet.birthYear)
@@ -37,4 +37,25 @@ function petAge(birthYear) {
   if ( age === 1) return "1 year old"
   if (age === 0) return "Less than 1 year"
   return `${age} years old`
+}
+
+const allButtons = document.querySelectorAll('.filters button')
+
+allButtons.forEach(el => {
+  el.addEventListener('click', handleButtonClick)
+})
+function handleButtonClick(e) {
+  allButtons.forEach(el => el.classList.remove('active'))
+
+  e.target.classList.add('active')
+
+  const currentFilter = e.target.dataset.filter
+
+  document.querySelectorAll('.pet-card').forEach(el => {
+    if (currentFilter === el.dataset.species || currentFilter === "all") {
+      el.style.display = "grid"
+    } else {
+      el.style.display = "none"
+    }
+  })
 }

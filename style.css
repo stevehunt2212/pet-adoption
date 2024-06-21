@@ -155,6 +155,7 @@ h4 {
     overflow: hidden;
     border: 1px solid #f3f3f3;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.08);
+    transition: all .5s;
 }
 .pet-card-img {
     width: 165px;
@@ -185,7 +186,7 @@ button {
     cursor: pointer;
     font-family: inherit;
 }
-.filters button.active {
+.active {
     text-decoration: underline;
     color: #475AFF;
 }
